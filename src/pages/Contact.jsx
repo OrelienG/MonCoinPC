@@ -132,8 +132,8 @@ export default function Contact() {
             </a>{' '}
             <br />
             Téléphone:{' '}
-            <a href="tel:+33612345678" className="text-primary">
-              +33 6 12 34 56 78
+            <a href="tel:+336" className="text-primary">
+              Bientot disponible
             </a>{' '}
             <br />
             Adresse: 44 Route de Craonne, 02160 La Ville-aux-Bois-lès-Pontavert, France
