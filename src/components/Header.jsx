@@ -1,7 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import logo from '../assets/logo.png';
-import { Helmet } from 'react-helmet';
 
 export default function Header() {
   const { pathname } = useLocation();
@@ -24,16 +23,12 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [pathname]);
+
   return (
     <>
-      <Helmet>
-        <title>Mon Coin PC - Accueil</title>
-        <meta
-          name="description"
-          content="Mon Coin PC propose des services de dépannage, réparation, assemblage et maintenance sur PC pour particuliers et professionnels."
-        />
-      </Helmet>
-
       <header
         className={`
           sticky top-0 z-50 bg-dark text-white px-6
@@ -57,7 +52,6 @@ export default function Header() {
             </span>
           </Link>
 
-          {/* Desktop nav */}
           <nav className="hidden md:flex gap-6">
             {navItems.map(({ path, label }) => {
               const isActive = pathname === path;
@@ -103,7 +97,6 @@ export default function Header() {
                 <Link
                   key={path}
                   to={path}
-                  onClick={() => setMenuOpen(false)}
                   className={`inline-block py-2 px-4 text-sm font-medium transition-all duration-200 rounded-full ${
                     isActive
                       ? 'bg-primary text-white'

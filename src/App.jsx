@@ -6,7 +6,7 @@ import Services from './pages/Services';
 import Contact from './pages/Contact';
 import MentionsLegales from './pages/LegalNotice';
 import Tarifs from './pages/Pricing';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 
 export default function App() {
   return (

@@ -1,10 +1,10 @@
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 
-export default function Tarifs() {
+export default function Pricing() {
   const services = [
     {
       title: 'Réparation PC',
-      price: 'A partir de 50€ / heure',
+      price: 'À partir de 50€ / heure',
     },
     {
       title: 'Assemblage sur mesure',
@@ -16,7 +16,7 @@ export default function Tarifs() {
     },
     {
       title: 'Nettoyage & Maintenance (Logiciel et Matériel)',
-      price: 'A partir de 60€',
+      price: 'À partir de 60€',
     },
     {
       title: 'Installation système',
