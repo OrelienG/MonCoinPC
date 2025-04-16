@@ -2,12 +2,12 @@ import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import logo from '../assets/logo.png';
 
-interface NavItem {
+type NavItem = {
   path: string;
   label: string;
-}
+};
 
-export default function Header() {
+export const Header = () => {
   const { pathname } = useLocation();
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const [scrolled, setScrolled] = useState<boolean>(false);
@@ -116,4 +116,4 @@ export default function Header() {
       )}
     </header>
   );
-}
+};

@@ -3,15 +3,15 @@ import { Helmet } from 'react-helmet-async';
 import { useForm } from '@formspree/react';
 import toast, { Toaster } from 'react-hot-toast';
 
-interface FormData {
+type FormData = {
   name: string;
   email: string;
   phone: string;
   message: string;
   category: string;
-}
+};
 
-export default function Contact() {
+export const Contact = () => {
   const [state, handleSubmit] = useForm('mjkylbaq');
   const [formData, setFormData] = useState<FormData>({
     name: '',
@@ -173,4 +173,4 @@ export default function Contact() {
       </section>
     </>
   );
-}
+};

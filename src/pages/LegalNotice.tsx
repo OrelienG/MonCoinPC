@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 
-export default function LegalNotice() {
+export const LegalNotice = () => {
   return (
     <>
       <Helmet>
@@ -90,4 +90,4 @@ export default function LegalNotice() {
       </section>
     </>
   );
-}
+};

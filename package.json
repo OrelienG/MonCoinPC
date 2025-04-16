@@ -9,7 +9,9 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "format": "prettier --write ."
+    "type-check": "tsc --noEmit",
+    "format": "prettier --write .",
+    "validate": "npm run type-check && npm run format && npm run lint:fix"
   },
   "dependencies": {
     "@formspree/react": "^3.0.0",

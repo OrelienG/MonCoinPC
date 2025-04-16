@@ -1,11 +1,11 @@
 import { ShieldCheckIcon, UserGroupIcon, WrenchIcon } from '@heroicons/react/24/outline';
 import { ComponentType } from 'react';
 
-interface Feature {
+type Feature = {
   icon: ComponentType<{ className?: string; 'aria-hidden': boolean }>;
   title: string;
   description: string;
-}
+};
 
 const features: Feature[] = [
   {
@@ -27,7 +27,7 @@ const features: Feature[] = [
   },
 ];
 
-export default function TrustSection() {
+export const TrustSection = () => {
   return (
     <section className="py-20 bg-white text-center px-4">
       <h2 className="text-3xl font-bold text-dark mb-12">Pourquoi me faire confiance ?</h2>
@@ -47,4 +47,4 @@ export default function TrustSection() {
       </div>
     </section>
   );
-}
+};

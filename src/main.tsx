@@ -1,13 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { Toaster } from 'react-hot-toast';
-import App from './App';
+import { App } from './App';
+
 import './index.css';
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
+createRoot(document.getElementById('root')!).render(
+  <StrictMode>
     <HelmetProvider>
       <BrowserRouter>
         <>
@@ -16,5 +17,5 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         </>
       </BrowserRouter>
     </HelmetProvider>
-  </React.StrictMode>,
+  </StrictMode>,
 );

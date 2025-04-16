@@ -1,4 +1,4 @@
-export default function HeroBackground() {
+export const HeroBackground = () => {
   return (
     <div className="absolute inset-0 -z-10 overflow-hidden">
       <svg
@@ -21,4 +21,4 @@ export default function HeroBackground() {
       </svg>
     </div>
   );
-}
+};

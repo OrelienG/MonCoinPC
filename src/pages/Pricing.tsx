@@ -1,7 +1,12 @@
 import { Helmet } from 'react-helmet-async';
 
-export default function Pricing() {
-  const services: { title: string; price: string }[] = [
+type Service = {
+  title: string;
+  price: string;
+};
+
+export const Pricing = () => {
+  const services: Service[] = [
     {
       title: 'Réparation PC',
       price: 'À partir de 50€ / heure',
@@ -71,4 +76,4 @@ export default function Pricing() {
       </section>
     </>
   );
-}
+};

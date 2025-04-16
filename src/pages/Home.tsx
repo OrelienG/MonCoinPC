@@ -1,8 +1,8 @@
 import { Helmet } from 'react-helmet-async';
-import Hero from '../components/Hero';
-import TrustSection from '../components/TrustSection';
+import { Hero } from '../components/Hero';
+import { TrustSection } from '../components/TrustSection';
 
-export default function Home() {
+export const Home = () => {
   return (
     <>
       <Helmet>
@@ -17,4 +17,4 @@ export default function Home() {
       <TrustSection />
     </>
   );
-}
+};

@@ -46,7 +46,7 @@ const services: Service[] = [
   },
 ];
 
-export default function Services() {
+export const Services = () => {
   return (
     <>
       <Helmet>
@@ -90,4 +90,4 @@ export default function Services() {
       </section>
     </>
   );
-}
+};
