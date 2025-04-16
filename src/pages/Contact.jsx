@@ -1,10 +1,10 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { useForm } from '@formspree/react';
+import toast, { Toaster } from 'react-hot-toast';
 
 export default function Contact() {
   const [state, handleSubmit] = useForm('mjkylbaq');
-  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -12,35 +12,25 @@ export default function Contact() {
     category: '',
   });
 
-  const [status, setStatus] = useState(null);
-
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
-    handleSubmit(e)
-      .then(() => {
-        if (state.succeeded) {
-          setStatus({ type: 'success', message: 'Message envoyé avec succès!' });
-          setFormData({ name: '', email: '', message: '', category: '' });
-        } else {
-          setStatus({ type: 'error', message: "Une erreur s'est produite. Veuillez réessayer." });
-        }
-      })
-      .catch((error) => {
-        setStatus({ type: 'error', message: "Une erreur s'est produite. Veuillez réessayer." });
-        console.error(error);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
+    await handleSubmit(e);
   };
+
+  useEffect(() => {
+    if (state.succeeded) {
+      toast.success('Message envoyé avec succès !');
+      setFormData({ name: '', email: '', message: '', category: '' });
+    }
+
+    if (state.errors && state.errors.length > 0) {
+      toast.error("Une erreur s'est produite. Veuillez réessayer.");
+    }
+  }, [state.succeeded, state.errors]);
 
   return (
     <>
@@ -52,18 +42,10 @@ export default function Contact() {
         />
       </Helmet>
 
+      <Toaster position="top-center" />
+
       <section className="max-w-6xl mx-auto px-6 py-20 bg-white rounded-lg shadow-md mt-16">
         <h1 className="text-3xl font-semibold text-dark mb-6 text-center">Contactez-moi</h1>
-
-        {status && (
-          <div
-            className={`${
-              status.type === 'success' ? 'bg-green-500' : 'bg-red-500'
-            } text-white p-3 rounded-lg mb-6 text-center`}
-          >
-            <p>{status.message}</p>
-          </div>
-        )}
 
         <form onSubmit={handleFormSubmit} className="space-y-6">
           <div>
@@ -77,7 +59,7 @@ export default function Contact() {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg mt-2 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg mt-2"
             />
           </div>
           <div>
@@ -91,7 +73,7 @@ export default function Contact() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg mt-2 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg mt-2"
             />
           </div>
           <div>
@@ -104,7 +86,7 @@ export default function Contact() {
               value={formData.category}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg mt-2 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg mt-2"
             >
               <option value="">Sélectionnez une catégorie</option>
               <option value="Reparation">Réparation PC</option>
@@ -127,16 +109,16 @@ export default function Contact() {
               onChange={handleChange}
               required
               rows="6"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg mt-2 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg mt-2"
             ></textarea>
           </div>
           <div>
             <button
               type="submit"
-              disabled={loading}
+              disabled={state.submitting}
               className="w-full bg-primary text-white font-medium py-3 px-6 rounded-lg shadow-md hover:bg-orange-600 transition"
             >
-              {loading ? 'Envoi en cours...' : 'Envoyer'}
+              {state.submitting ? 'Envoi en cours...' : 'Envoyer'}
             </button>
           </div>
         </form>
