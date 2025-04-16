@@ -8,6 +8,7 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     message: '',
     category: '',
   });
@@ -24,7 +25,7 @@ export default function Contact() {
   useEffect(() => {
     if (state.succeeded) {
       toast.success('Message envoyé avec succès !');
-      setFormData({ name: '', email: '', message: '', category: '' });
+      setFormData({ name: '', email: '', phone: '', message: '', category: '' });
     }
 
     if (state.errors && state.errors.length > 0) {
@@ -62,6 +63,7 @@ export default function Contact() {
               className="w-full px-4 py-2 border border-gray-300 rounded-lg mt-2"
             />
           </div>
+
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-dark">
               Email
@@ -76,6 +78,23 @@ export default function Contact() {
               className="w-full px-4 py-2 border border-gray-300 rounded-lg mt-2"
             />
           </div>
+
+          <div>
+            <label htmlFor="phone" className="block text-sm font-medium text-dark">
+              Téléphone (optionnel)
+            </label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              pattern="^(\+33|0)[1-9](\d{2}){4}$"
+              placeholder="Ex: 0612345678"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg mt-2 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+            />
+          </div>
+
           <div>
             <label htmlFor="category" className="block text-sm font-medium text-dark">
               Catégorie
@@ -98,6 +117,7 @@ export default function Contact() {
               <option value="Autre">Autre</option>
             </select>
           </div>
+
           <div>
             <label htmlFor="message" className="block text-sm font-medium text-dark">
               Message
@@ -112,6 +132,7 @@ export default function Contact() {
               className="w-full px-4 py-2 border border-gray-300 rounded-lg mt-2"
             ></textarea>
           </div>
+
           <div>
             <button
               type="submit"
@@ -133,7 +154,7 @@ export default function Contact() {
             <br />
             Téléphone:{' '}
             <a href="tel:+336" className="text-primary">
-              Bientot disponible
+              Bientôt disponible
             </a>{' '}
             <br />
             Adresse: 44 Route de Craonne, 02160 La Ville-aux-Bois-lès-Pontavert, France
