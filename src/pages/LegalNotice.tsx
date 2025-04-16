@@ -57,7 +57,7 @@ export default function LegalNotice() {
             <p>
               Le contenu de ce site (textes, images, logos, etc.) est protégé par les droits de
               propriété intellectuelle. Toute reproduction ou représentation, même partielle, est
-              interdite sans l'autorisation écrite préalable de l’éditeur.
+              interdite sans l&apos;autorisation écrite préalable de l’éditeur.
             </p>
           </div>
 

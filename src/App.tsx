@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -6,9 +7,9 @@ import Services from './pages/Services';
 import Contact from './pages/Contact';
 import MentionsLegales from './pages/LegalNotice';
 import Tarifs from './pages/Pricing';
-import { Helmet } from 'react-helmet-async';
+import { FC } from 'react';
 
-export default function App() {
+const App: FC = () => {
   return (
     <div className="min-h-screen bg-light text-text font-sans flex flex-col">
       <Header />
@@ -94,4 +95,6 @@ export default function App() {
       <Footer />
     </div>
   );
-}
+};
+
+export default App;
