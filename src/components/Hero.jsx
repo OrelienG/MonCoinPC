@@ -16,12 +16,12 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="text-lg text-subtle mt-4 leading-relaxed max-w-xl mx-auto md:mx-0">
+          <p className="text-lg text-subtle mt-4 leading-relaxed max-w-xl">
             Réparation, amélioration, installation de composants… <br />
             Pour particuliers et pros : confiez votre machine à un passionné.
           </p>
 
-          <div className="mt-8 flex justify-center md:justify-start gap-6">
+          <div className="mt-8 flex justify-center gap-6">
             <Link
               to="/contact"
               className="inline-block bg-primary text-white font-medium py-3 px-6 rounded-full shadow-md hover:bg-orange-600 transition duration-300"
