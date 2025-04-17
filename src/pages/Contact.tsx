@@ -1,11 +1,19 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, ChangeEvent, FormEvent } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useForm } from '@formspree/react';
 import toast, { Toaster } from 'react-hot-toast';
 
-export default function Contact() {
+type FormData = {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+  category: string;
+};
+
+export const Contact = () => {
   const [state, handleSubmit] = useForm('mjkylbaq');
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
     phone: '',
@@ -13,11 +21,13 @@ export default function Contact() {
     category: '',
   });
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleFormSubmit = async (e) => {
+  const handleFormSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     await handleSubmit(e);
   };
@@ -28,7 +38,7 @@ export default function Contact() {
       setFormData({ name: '', email: '', phone: '', message: '', category: '' });
     }
 
-    if (state.errors && state.errors.length > 0) {
+    if (state.errors && Object.keys(state.errors).length > 0) {
       toast.error("Une erreur s'est produite. Veuillez réessayer.");
     }
   }, [state.succeeded, state.errors]);
@@ -128,7 +138,7 @@ export default function Contact() {
               value={formData.message}
               onChange={handleChange}
               required
-              rows="6"
+              rows={6}
               className="w-full px-4 py-2 border border-gray-300 rounded-lg mt-2"
             ></textarea>
           </div>
@@ -163,4 +173,4 @@ export default function Contact() {
       </section>
     </>
   );
-}
+};

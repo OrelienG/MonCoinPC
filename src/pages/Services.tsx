@@ -1,7 +1,13 @@
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
-const services = [
+type Service = {
+  title: string;
+  icon: string;
+  description: string;
+};
+
+const services: Service[] = [
   {
     title: 'Réparation PC',
     icon: '🛠️',
@@ -40,7 +46,7 @@ const services = [
   },
 ];
 
-export default function Services() {
+export const Services = () => {
   return (
     <>
       <Helmet>
@@ -84,4 +90,4 @@ export default function Services() {
       </section>
     </>
   );
-}
+};

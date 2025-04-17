@@ -1,14 +1,14 @@
 import { Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import Services from './pages/Services';
-import Contact from './pages/Contact';
-import MentionsLegales from './pages/LegalNotice';
-import Tarifs from './pages/Pricing';
 import { Helmet } from 'react-helmet-async';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
+import { Home } from './pages/Home';
+import { Services } from './pages/Services';
+import { Contact } from './pages/Contact';
+import { LegalNotice } from './pages/LegalNotice';
+import { Pricing } from './pages/Pricing';
 
-export default function App() {
+export const App = () => {
   return (
     <div className="min-h-screen bg-light text-text font-sans flex flex-col">
       <Header />
@@ -70,7 +70,7 @@ export default function App() {
                     content="Découvrez les mentions légales et les informations juridiques de Mon Coin PC."
                   />
                 </Helmet>
-                <MentionsLegales />
+                <LegalNotice />
               </>
             }
           />
@@ -85,7 +85,7 @@ export default function App() {
                     content="Consultez les tarifs de mes services de dépannage, réparation, et assemblage de PC."
                   />
                 </Helmet>
-                <Tarifs />
+                <Pricing />
               </>
             }
           />
@@ -94,4 +94,4 @@ export default function App() {
       <Footer />
     </div>
   );
-}
+};

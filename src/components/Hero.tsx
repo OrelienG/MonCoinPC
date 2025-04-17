@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
+import { HeroBackground } from './HeroBackground';
 import heroImage from '../assets/home.jpg';
-import HeroBackground from './HeroBackground';
 
-export default function Hero() {
+export const Hero = () => {
   return (
     <section className="relative isolate overflow-hidden py-24">
       <HeroBackground />
@@ -50,4 +50,4 @@ export default function Hero() {
       </div>
     </section>
   );
-}
+};
