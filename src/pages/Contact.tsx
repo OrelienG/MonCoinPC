@@ -157,17 +157,17 @@ export const Contact = () => {
         <div className="mt-12 text-center">
           <p className="text-sm text-subtle">
             Ou contactez-moi directement : <br />
-            Email:{' '}
+            Email :{' '}
             <a href="mailto:contact@moncoinpc.fr" className="text-primary">
               contact@moncoinpc.fr
             </a>{' '}
             <br />
-            Téléphone:{' '}
-            <a href="tel:+336" className="text-primary">
-              Bientôt disponible
+            Téléphone :{' '}
+            <a href="tel:+336­66397517­" className="text-primary">
+              ­06.66.39.75.17­
             </a>{' '}
             <br />
-            Adresse: 44 Route de Craonne, 02160 La Ville-aux-Bois-lès-Pontavert, France
+            Adresse : 44 Route de Craonne, 02160 La Ville-aux-Bois-lès-Pontavert, France
           </p>
         </div>
       </section>
