@@ -17,7 +17,7 @@ export const Pricing = () => {
     },
     {
       title: 'Upgrade composants',
-      price: 'À partir de 80€',
+      price: 'Selon le composant',
     },
     {
       title: 'Nettoyage & Maintenance (Logiciel et Matériel)',
