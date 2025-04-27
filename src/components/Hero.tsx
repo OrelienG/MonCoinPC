@@ -40,11 +40,11 @@ export const Hero = () => {
           </div>
         </div>
 
-        <div className="relative">
+        <div className="relative w-md">
           <img
             src={heroImage}
             alt="Montage PC personnalisé avec des composants de qualité"
-            className="w-full max-w-md mx-auto rounded-2xl shadow-2xl ring-1 ring-black/10 transition-transform duration-300 hover:scale-105"
+            className="w-full h-full object-cover mx-auto rounded-2xl shadow-2xl ring-1 ring-black/10 transition-transform duration-300 hover:scale-105 will-change-transform"
           />
         </div>
       </div>
