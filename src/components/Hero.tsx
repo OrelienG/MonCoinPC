@@ -21,7 +21,7 @@ export const Hero = () => {
             Pour particuliers et pros : confiez votre machine à un passionné.
           </p>
 
-          <div className="mt-8 flex justify-center gap-6">
+          <div className="mt-8 flex gap-6">
             <Link
               to="/contact"
               className="inline-block bg-primary text-white font-medium py-3 px-6 rounded-full shadow-md hover:bg-orange-600 transition duration-300"
@@ -32,7 +32,7 @@ export const Hero = () => {
 
             <Link
               to="/pricing"
-              className="inline-block bg-primary text-white font-medium py-3 px-6 rounded-full shadow-md hover:bg-orange-600 transition duration-300"
+              className="inline-block bg-gray-800 text-white font-medium py-3 px-6 rounded-full shadow-md hover:bg-gray-900 transition duration-300"
               aria-label="Voir les tarifs"
             >
               Voir les tarifs
