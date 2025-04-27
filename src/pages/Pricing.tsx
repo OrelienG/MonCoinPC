@@ -68,7 +68,7 @@ export const Pricing = () => {
           </p>
           <a
             href="/contact"
-            className="inline-block bg-primary text-white font-medium py-3 px-6 rounded-lg shadow-md hover:bg-orange-600 transition"
+            className="inline-block bg-primary text-white font-medium py-3 px-6 rounded-full shadow-md hover:bg-orange-600 transition"
           >
             Demander un devis
           </a>
