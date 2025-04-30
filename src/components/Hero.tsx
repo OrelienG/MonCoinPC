@@ -21,7 +21,7 @@ export const Hero = () => {
             Pour particuliers et pros : confiez votre machine à un passionné.
           </p>
 
-          <div className="mt-8 flex justify-center gap-6">
+          <div className="mt-8 flex gap-6">
             <Link
               to="/contact"
               className="inline-block bg-primary text-white font-medium py-3 px-6 rounded-full shadow-md hover:bg-orange-600 transition duration-300"
@@ -32,7 +32,7 @@ export const Hero = () => {
 
             <Link
               to="/pricing"
-              className="inline-block bg-primary text-white font-medium py-3 px-6 rounded-full shadow-md hover:bg-orange-600 transition duration-300"
+              className="inline-block bg-gray-800 text-white font-medium py-3 px-6 rounded-full shadow-md hover:bg-gray-900 transition duration-300"
               aria-label="Voir les tarifs"
             >
               Voir les tarifs
@@ -40,11 +40,11 @@ export const Hero = () => {
           </div>
         </div>
 
-        <div className="relative">
+        <div className="relative w-md">
           <img
             src={heroImage}
             alt="Montage PC personnalisé avec des composants de qualité"
-            className="w-full max-w-md mx-auto rounded-2xl shadow-2xl ring-1 ring-black/10 transition-transform duration-300 hover:scale-105"
+            className="w-full h-full object-cover mx-auto rounded-2xl shadow-2xl ring-1 ring-black/10 transition-transform duration-300 hover:scale-105 will-change-transform"
           />
         </div>
       </div>

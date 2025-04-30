@@ -73,16 +73,16 @@ export const Services = () => {
           ))}
         </div>
 
-        <div className="text-center mt-16">
+        <div className="flex items-center justify-center mt-16">
           <Link
             to="/contact"
-            className="inline-block bg-primary text-white font-medium px-6 py-3 rounded-lg shadow hover:brightness-110 transition mr-4"
+            className="bg-primary text-white font-medium px-6 py-3 rounded-full shadow hover:bg-orange-600 transition mr-4"
           >
             Besoin d’un service ? Contactez-moi
           </Link>
           <Link
             to="/pricing"
-            className="inline-block bg-transparent border-2 border-primary text-primary font-medium px-6 py-3 rounded-lg shadow hover:bg-primary hover:text-white transition"
+            className="bg-gray-800 border-2 text-white font-medium px-6 py-3 rounded-full shadow hover:bg-gray-900 transition"
           >
             Voir les tarifs
           </Link>

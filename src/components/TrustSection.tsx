@@ -36,7 +36,7 @@ export const TrustSection = () => {
         {features.map(({ icon: Icon, title, description }) => (
           <div
             key={title}
-            className="bg-light p-6 rounded-xl shadow-md hover:shadow-lg transition-transform duration-300 transform hover:scale-105"
+            className="bg-light p-6 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-2 transition-all duration-300"
             aria-label={title}
           >
             <Icon className="h-10 w-10 mx-auto text-primary mb-4" aria-hidden />

@@ -13,7 +13,7 @@ export const Pricing = () => {
     },
     {
       title: 'Assemblage sur mesure',
-      price: 'À partir de 120€',
+      price: 'À partir de 80€',
     },
     {
       title: 'Upgrade composants',
@@ -43,14 +43,14 @@ export const Pricing = () => {
         />
       </Helmet>
 
-      <section className="py-20 bg-white text-center px-4">
+      <section className="py-20 bg-light text-center px-4">
         <h2 className="text-3xl font-bold text-dark mb-6">Tarifs</h2>
 
         <div className="max-w-6xl mx-auto grid gap-8 md:grid-cols-3">
           {services.map((service) => (
             <div
               key={service.title}
-              className="bg-light p-6 rounded-xl shadow-md hover:shadow-lg transition"
+              className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition"
             >
               <h3 className="text-xl font-semibold text-dark mb-4">{service.title}</h3>
               <p className="text-lg font-bold text-primary">{service.price}</p>
@@ -59,16 +59,16 @@ export const Pricing = () => {
         </div>
 
         <div className="text-center mt-12">
-          <p className="text-lg text-dark mb-4">
+          <p className="text-lg font-semibold text-dark mb-4">
             Vous avez des questions sur mes services ou tarifs ?
           </p>
           <p className="text-sm text-subtle mb-6">
-            Les prix peuvent varier en fonction de la complexité de la tâche. Pour un devis précis,
-            contactez-moi !
+            Les prix peuvent varier en fonction de la complexité de la tâche. Des forfaits sont
+            également disponible. Pour un devis précis, contactez-moi !
           </p>
           <a
             href="/contact"
-            className="inline-block bg-primary text-white font-medium py-3 px-6 rounded-lg shadow-md hover:bg-orange-600 transition"
+            className="inline-block bg-primary text-white font-medium py-3 px-6 rounded-full shadow-md hover:bg-orange-600 transition"
           >
             Demander un devis
           </a>
