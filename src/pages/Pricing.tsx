@@ -13,7 +13,7 @@ export const Pricing = () => {
     },
     {
       title: 'Assemblage sur mesure',
-      price: 'À partir de 120€',
+      price: 'À partir de 80€',
     },
     {
       title: 'Upgrade composants',
@@ -63,8 +63,8 @@ export const Pricing = () => {
             Vous avez des questions sur mes services ou tarifs ?
           </p>
           <p className="text-sm text-subtle mb-6">
-            Les prix peuvent varier en fonction de la complexité de la tâche. Pour un devis précis,
-            contactez-moi !
+            Les prix peuvent varier en fonction de la complexité de la tâche. Des forfaits sont
+            également disponible. Pour un devis précis, contactez-moi !
           </p>
           <a
             href="/contact"
