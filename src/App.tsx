@@ -39,7 +39,7 @@ export const App = () => {
                   <title>Mes Services - Mon Coin PC</title>
                   <meta
                     name="description"
-                    content="Découvrez les services de dépannage, réparation, assemblage, upgrade et maintenance pour PC fixes et portables."
+                    content="Réparation, assemblage, upgrade et nettoyage de PC. Découvrez l'ensemble de mes services sur mesure."
                   />
                   <link rel="canonical" href="https://www.moncoinpc.fr/services" />
                 </Helmet>
@@ -55,7 +55,7 @@ export const App = () => {
                   <title>Contactez-moi - Mon Coin PC</title>
                   <meta
                     name="description"
-                    content="Contactez Mon Coin PC pour des services de réparation, assemblage ou maintenance PC. Je suis là pour vous aider."
+                    content="Besoin d'aide avec votre PC ? Contactez-moi pour une réparation ou un montage personnalisé."
                   />
                   <link rel="canonical" href="https://www.moncoinpc.fr/contact" />
                 </Helmet>
@@ -71,7 +71,7 @@ export const App = () => {
                   <title>Mentions Légales - Mon Coin PC</title>
                   <meta
                     name="description"
-                    content="Découvrez les mentions légales et les informations juridiques de Mon Coin PC."
+                    content="Consultez les mentions légales et les informations légales de Mon Coin PC."
                   />
                   <link rel="canonical" href="https://www.moncoinpc.fr/legal-notice" />
                 </Helmet>
@@ -87,7 +87,7 @@ export const App = () => {
                   <title>Tarifs - Mon Coin PC</title>
                   <meta
                     name="description"
-                    content="Consultez les tarifs de mes services de dépannage, réparation, et assemblage de PC."
+                    content="Consultez les prix des services proposés : dépannage, montage, entretien et installation système."
                   />
                   <link rel="canonical" href="https://www.moncoinpc.fr/pricing" />
                 </Helmet>
@@ -103,7 +103,7 @@ export const App = () => {
                   <title>Page introuvable - Mon Coin PC</title>
                   <meta
                     name="description"
-                    content="La page que vous recherchez est introuvable. Découvrez nos services ou contactez-nous."
+                    content="La page que vous recherchez est introuvable. Explorez nos services ou contactez-nous."
                   />
                   <meta name="robots" content="noindex" />
                 </Helmet>

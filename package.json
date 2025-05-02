@@ -1,12 +1,16 @@
 {
   "name": "mon-coin-pc",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "description": "Services de réparation, assemblage, nettoyage et vente de composants pour PC",
+  "author": "Orel",
+  "homepage": "https://moncoinpc.fr",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "preview:build": "npm run build && npm run preview",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "type-check": "tsc --noEmit",
