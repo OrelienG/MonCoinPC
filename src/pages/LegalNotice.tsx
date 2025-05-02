@@ -1,16 +1,6 @@
-import { Helmet } from 'react-helmet-async';
-
 export const LegalNotice = () => {
   return (
     <>
-      <Helmet>
-        <title>Mentions Légales - Mon Coin PC</title>
-        <meta
-          name="description"
-          content="Consultez les mentions légales de Mon Coin PC, incluant les informations sur l'éditeur, l'hébergement, la propriété intellectuelle, la responsabilité, les données personnelles et les cookies."
-        />
-      </Helmet>
-
       <section className="max-w-4xl mx-auto px-4 py-20">
         <h1 className="text-3xl font-bold text-dark mb-6">Mentions légales</h1>
 
