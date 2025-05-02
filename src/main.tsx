@@ -11,10 +11,8 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <HelmetProvider>
       <BrowserRouter>
-        <>
-          <Toaster position="top-center" reverseOrder={false} />
-          <App />
-        </>
+        <App />
+        <Toaster position="top-center" reverseOrder={false} />
       </BrowserRouter>
     </HelmetProvider>
   </StrictMode>,

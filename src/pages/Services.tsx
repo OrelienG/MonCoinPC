@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 
 type Service = {
   title: string;
@@ -49,14 +48,6 @@ const services: Service[] = [
 export const Services = () => {
   return (
     <>
-      <Helmet>
-        <title>Services - Mon Coin PC</title>
-        <meta
-          name="description"
-          content="Découvrez mes services de dépannage, réparation, assemblage et maintenance de PC sur mesure pour particuliers et professionnels."
-        />
-      </Helmet>
-
       <section className="max-w-6xl mx-auto px-4 py-20">
         <h1 className="text-3xl font-bold text-dark text-center mb-12">Mes services</h1>
 

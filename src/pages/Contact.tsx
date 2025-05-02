@@ -1,5 +1,4 @@
 import { useState, useEffect, ChangeEvent, FormEvent } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { useForm } from '@formspree/react';
 import toast, { Toaster } from 'react-hot-toast';
 
@@ -45,14 +44,6 @@ export const Contact = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Contact - Mon Coin PC</title>
-        <meta
-          name="description"
-          content="Contactez Mon Coin PC pour des services de dépannage, réparation, et assemblage de PC. Nous vous répondrons dans les plus brefs délais."
-        />
-      </Helmet>
-
       <Toaster position="top-center" />
 
       <section className="max-w-6xl mx-auto px-6 py-20 bg-white rounded-lg shadow-md mt-16">
@@ -163,8 +154,8 @@ export const Contact = () => {
             </a>{' '}
             <br />
             Téléphone :{' '}
-            <a href="tel:+336­66397517­" className="text-primary">
-              ­06.66.39.75.17­
+            <a href="tel:+33666397517" className="text-primary">
+              06.66.39.75.17
             </a>{' '}
             <br />
             Adresse : 44 Route de Craonne, 02160 La Ville-aux-Bois-lès-Pontavert, France
