@@ -7,7 +7,7 @@ export const Pricing = () => {
   const services: Service[] = [
     {
       title: 'Réparation PC',
-      price: 'À partir de 50€ / heure',
+      price: 'À partir de 60€ / heure',
     },
     {
       title: 'Assemblage sur mesure',
@@ -22,7 +22,7 @@ export const Pricing = () => {
       price: 'À partir de 60€',
     },
     {
-      title: 'Installation système',
+      title: 'Installation et configuration système',
       price: 'À partir de 80€',
     },
     {

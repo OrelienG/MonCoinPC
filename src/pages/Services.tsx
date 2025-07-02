@@ -32,7 +32,7 @@ const services: Service[] = [
       'Nettoyage interne, changement de pâte thermique, dépoussiérage et désinfection antivirus pour optimiser les performances.',
   },
   {
-    title: 'Installation système',
+    title: 'Installation et configuration système',
     icon: '🖥️',
     description:
       'Installation propre de Windows ou Linux, configuration des pilotes, antivirus, logiciels utiles.',

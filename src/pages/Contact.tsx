@@ -113,7 +113,7 @@ export const Contact = () => {
               <option value="Assemblage">Assemblage sur mesure</option>
               <option value="Upgrade">Upgrade & Nettoyage</option>
               <option value="Maintenance">Maintenance & Nettoyage</option>
-              <option value="Installation">Installation système</option>
+              <option value="Installation">Installation et configuration système</option>
               <option value="Composants">Vente de composants</option>
               <option value="Autre">Autre</option>
             </select>
