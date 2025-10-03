@@ -11,37 +11,37 @@ const services: Service[] = [
     title: 'Réparation PC',
     icon: '🛠️',
     description:
-      'Diagnostic rapide et réparation des pannes matérielles ou logicielles sur ordinateurs fixes et portables.',
+      'Panne matérielle ou logicielle ? Je répare votre PC rapidement, à domicile ou à distance. Diagnostic clair et sans jargon.',
   },
   {
     title: 'Assemblage sur mesure',
     icon: '🧰',
     description:
-      'Montage complet de votre configuration personnalisée, en fonction de vos besoins et de votre budget.',
+      'Je monte votre PC selon vos besoins (jeux, bureautique, pro). Performance, silence et qualité au rendez-vous.',
   },
   {
-    title: 'Upgrade composants',
+    title: 'Amélioration (Upgrade)',
     icon: '🚀',
     description:
-      'Amélioration des performances : ajout de RAM, changement de disque dur, carte graphique, etc.',
+      'PC lent ? Je booste ses performances : ajout de RAM, SSD, carte graphique, etc. Recommandations personnalisées.',
   },
   {
-    title: 'Nettoyage & Maintenance (Logiciel et Matériel)',
+    title: 'Nettoyage complet',
     icon: '🧽',
     description:
-      'Nettoyage interne, changement de pâte thermique, dépoussiérage et désinfection antivirus pour optimiser les performances.',
+      'Dépoussiérage, changement de pâte thermique, suppression de virus… pour un PC plus sain et plus rapide.',
   },
   {
-    title: 'Installation et configuration système',
+    title: 'Réinstallation système',
     icon: '🖥️',
     description:
-      'Installation propre de Windows ou Linux, configuration des pilotes, antivirus, logiciels utiles.',
+      'Windows ou Linux proprement installé, pilotes à jour, logiciels essentiels configurés. Clé USB ou disque fourni possible.',
   },
   {
     title: 'Vente de composants',
     icon: '📦',
     description:
-      'Fourniture de pièces neuves : disques, mémoires, cartes mères, processeurs, etc. à des tarifs compétitifs.',
+      'Besoin de pièces fiables ? Je fournis RAM, SSD, processeurs, etc., au bon prix, et je peux les installer si besoin.',
   },
 ];
 
@@ -57,19 +57,19 @@ export const Services = () => {
               key={service.title}
               className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition"
             >
-              <div className="text-6xl text-center mb-4">{service.icon}</div>
+              <div className="text-5xl text-center mb-4">{service.icon}</div>
               <h2 className="text-lg font-semibold text-dark mb-2 text-center">{service.title}</h2>
               <p className="text-sm text-subtle text-center">{service.description}</p>
             </div>
           ))}
         </div>
 
-        <div className="flex items-center justify-center mt-16">
+        <div className="flex flex-col md:flex-row items-center justify-center mt-16 gap-4">
           <Link
             to="/contact"
-            className="bg-primary text-white font-medium px-6 py-3 rounded-full shadow hover:bg-orange-600 transition mr-4"
+            className="bg-primary text-white font-medium px-6 py-3 rounded-full shadow hover:bg-orange-600 transition"
           >
-            Besoin d’un service ? Contactez-moi
+            Demander un devis
           </Link>
           <Link
             to="/pricing"
