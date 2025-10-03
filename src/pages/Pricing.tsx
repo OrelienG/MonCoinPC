@@ -11,7 +11,7 @@ export const Pricing = () => {
     },
     {
       title: 'Assemblage PC sur mesure',
-      price: 'À partir de 80€',
+      price: 'À partir de 60€',
     },
     {
       title: 'Mise à niveau (upgrade)',
@@ -62,17 +62,6 @@ export const Pricing = () => {
           >
             Demander un devis
           </a>
-        </div>
-
-        <div className="text-center mt-12 text-sm text-subtle max-w-2xl mx-auto">
-          <p className="mb-1">
-            Zone d’intervention : jusqu’à <strong>30 km</strong> autour de La
-            Ville-aux-Bois-lès-Pontavert.
-          </p>
-          <p className="mb-1">
-            Déplacement facturé <strong>0,70€/km HT</strong> au-delà de 15 km.
-          </p>
-          <p>Estimation gratuite à distance ou par téléphone.</p>
         </div>
       </section>
     </>
