@@ -1,7 +1,7 @@
 export const LegalNotice = () => {
   return (
     <>
-      <section className="max-w-4xl mx-auto px-4 py-20">
+      <section className="max-w-4xl mx-auto px-4 py-16">
         <h1 className="text-3xl font-bold text-dark mb-6">Mentions légales</h1>
 
         <div className="space-y-8 text-sm text-subtle leading-relaxed">

@@ -7,7 +7,6 @@ import { NotFound } from './pages/NotFound';
 import { Services } from './pages/Services';
 import { Contact } from './pages/Contact';
 import { LegalNotice } from './pages/LegalNotice';
-import { Pricing } from './pages/Pricing';
 
 export const App = () => {
   return (
@@ -76,22 +75,6 @@ export const App = () => {
                   <link rel="canonical" href="https://www.moncoinpc.fr/legal-notice" />
                 </Helmet>
                 <LegalNotice />
-              </>
-            }
-          />
-          <Route
-            path="/pricing"
-            element={
-              <>
-                <Helmet>
-                  <title>Tarifs - Mon Coin PC</title>
-                  <meta
-                    name="description"
-                    content="Consultez les prix des services proposés : dépannage, montage, entretien et installation système."
-                  />
-                  <link rel="canonical" href="https://www.moncoinpc.fr/pricing" />
-                </Helmet>
-                <Pricing />
               </>
             }
           />

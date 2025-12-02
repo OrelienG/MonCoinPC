@@ -29,7 +29,7 @@ const features: Feature[] = [
 
 export const TrustSection = () => {
   return (
-    <section className="py-20 bg-white text-center px-4">
+    <section className="py-16 bg-white text-center px-4">
       <h2 className="text-3xl font-bold text-dark mb-12">Pourquoi me faire confiance ?</h2>
 
       <div className="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto">

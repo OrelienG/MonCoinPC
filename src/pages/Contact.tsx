@@ -46,7 +46,7 @@ export const Contact = () => {
     <>
       <Toaster position="top-center" />
 
-      <section className="max-w-6xl mx-auto px-6 py-20 bg-white rounded-lg shadow-md mt-16">
+      <section className="max-w-6xl mx-auto px-6 py-16 bg-white rounded-lg shadow-md mt-16">
         <h1 className="text-3xl font-semibold text-dark mb-6 text-center">Contactez-moi</h1>
 
         <form onSubmit={handleFormSubmit} className="space-y-6">
@@ -156,9 +156,7 @@ export const Contact = () => {
             Téléphone :{' '}
             <a href="tel:+33666397517" className="text-primary">
               06.66.39.75.17
-            </a>{' '}
-            <br />
-            Adresse : 44 Route de Craonne, 02160 La Ville-aux-Bois-lès-Pontavert, France
+            </a>
           </p>
         </div>
       </section>

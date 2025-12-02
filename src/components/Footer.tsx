@@ -20,9 +20,6 @@ export const Footer = () => {
           <Link to="/services" className="hover:text-primary transition">
             Services
           </Link>
-          <Link to="/pricing" className="hover:text-primary transition">
-            Tarifs
-          </Link>
           <Link to="/contact" className="hover:text-primary transition">
             Contact
           </Link>

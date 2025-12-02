@@ -31,11 +31,11 @@ export const Hero = () => {
             </Link>
 
             <Link
-              to="/pricing"
+              to="/services"
               className="inline-block bg-gray-800 text-white font-medium py-3 px-6 rounded-full shadow-md hover:bg-gray-900 transition duration-300"
-              aria-label="Voir les tarifs"
+              aria-label="Voir les services"
             >
-              Voir les tarifs
+              Voir les services
             </Link>
           </div>
         </div>
