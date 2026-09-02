@@ -115,6 +115,10 @@ export const Contact = () => {
               <option value="Maintenance">Maintenance & Nettoyage</option>
               <option value="Installation">Installation et configuration système</option>
               <option value="Composants">Vente de composants</option>
+              <option value="Composants">Vente de composants</option>
+              <option value="Peripheriques">Imprimantes & périphériques</option>
+              <option value="Donnees">Données & sauvegarde</option>
+              <option value="Consoles">Entretien consoles</option>
               <option value="Autre">Autre</option>
             </select>
           </div>

@@ -13,42 +13,64 @@ const services: Service[] = [
     icon: '🛠️',
     description:
       'Panne matérielle ou logicielle ? Je répare votre PC rapidement, à domicile ou à distance. Diagnostic clair et sans jargon.',
-    price: 'À partir de 20€',
+    price: 'À partir de 30€',
   },
   {
     title: 'Assemblage sur mesure',
     icon: '🧰',
     description:
       'Je monte votre PC selon vos besoins (jeux, bureautique, pro). Performance, silence et qualité au rendez-vous.',
-    price: 'À partir de 60€',
+    price: 'À partir de 90€',
   },
   {
     title: 'Amélioration (Upgrade)',
     icon: '🚀',
     description:
       'PC lent ? Je booste ses performances : ajout de RAM, SSD, carte graphique, etc. Recommandations personnalisées.',
-    price: 'Selon le composant',
+    price: 'Sur devis',
   },
   {
     title: 'Nettoyage et Maintenance',
     icon: '🧽',
     description:
       'Dépoussiérage, changement de pâte thermique, suppression de virus… pour un PC plus sain et plus rapide.',
-    price: 'A partir de 40€',
+    price: 'A partir de 50€',
   },
   {
     title: '(Ré) Installation système',
     icon: '🖥️',
     description:
       'Windows ou Linux proprement installé, pilotes à jour, logiciels essentiels configurés. Clé USB ou disque fourni possible.',
-    price: 'A partir de 40€',
+    price: 'A partir de 80€',
   },
   {
     title: 'Vente de composants',
     icon: '📦',
     description:
       'Besoin de pièces fiables ? Je fournis RAM, SSD, processeurs, etc., au bon prix, et je peux les installer si besoin.',
-    price: 'Selon le composant',
+    price: 'Sur devis',
+  },
+  {
+    title: 'Imprimantes & périphériques',
+    icon: '🖨️',
+    description:
+      'Installation, configuration et dépannage de vos imprimantes et périphériques : scanner, webcam, clavier, etc.',
+    price: 'À partir de 20€',
+  },
+
+  {
+    title: 'Données & sauvegarde',
+    icon: '💾',
+    description:
+      'Transfert, sauvegarde et récupération de vos fichiers, ou migration de vos données vers un nouveau PC ou disque.',
+    price: 'À partir de 40€',
+  },
+  {
+    title: 'Entretien consoles',
+    icon: '🎮',
+    description:
+      'Nettoyage, entretien et remplacement de pâte thermique sur Nintendo Switch, PlayStation, Xbox, etc.',
+    price: 'À partir de 50€',
   },
 ];
 
