@@ -20,11 +20,30 @@ export const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
+      const y = window.scrollY;
+
+      setScrolled((current) => {
+        if (!current && y > 60) {
+          return true;
+        }
+
+        if (current && y < 20) {
+          return false;
+        }
+
+        return current;
+      });
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    handleScroll();
+
+    window.addEventListener('scroll', handleScroll, {
+      passive: true,
+    });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   useEffect(() => {
@@ -44,9 +63,10 @@ export const Header = () => {
           <img
             src={logo}
             alt="Mon Coin PC"
-            className={`object-contain transition-all duration-300 ${
-              scrolled ? 'w-12 h-12 md:w-14 md:h-14' : 'w-14 h-14 md:w-16 md:h-16'
-            }`}
+            className={`
+              object-contain transition-all duration-300
+              ${scrolled ? 'w-12 h-12 md:w-14 md:h-14' : 'w-14 h-14 md:w-16 md:h-16'}
+            `}
           />
           <span className="text-xl md:text-2xl font-semibold tracking-tight">
             <span className="text-primary">Mon </span>
@@ -62,11 +82,17 @@ export const Header = () => {
               <Link
                 key={path}
                 to={path}
-                className={`inline-block py-2 px-4 text-sm font-medium transition-all duration-200 rounded-full ${
-                  isActive
-                    ? 'bg-primary text-white'
-                    : 'bg-transparent text-white hover:bg-primary hover:text-white'
-                }`}
+                className={`
+                  inline-block py-2 px-4
+                  text-sm font-medium
+                  transition-all duration-200
+                  rounded-full
+                  ${
+                    isActive
+                      ? 'bg-primary text-white'
+                      : 'bg-transparent text-white hover:bg-primary hover:text-white'
+                  }
+                `}
                 aria-label={`Aller à la page ${label}`}
               >
                 {label}
@@ -75,7 +101,15 @@ export const Header = () => {
           })}
         </nav>
 
-        <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu">
+        <button
+          type="button"
+          className="md:hidden"
+          onClick={() => {
+            setMenuOpen((current) => !current);
+          }}
+          aria-label="Menu"
+          aria-expanded={menuOpen}
+        >
           <svg
             className="w-6 h-6"
             fill="none"
@@ -100,11 +134,17 @@ export const Header = () => {
               <Link
                 key={path}
                 to={path}
-                className={`inline-block py-2 px-4 text-sm font-medium transition-all duration-200 rounded-full ${
-                  isActive
-                    ? 'bg-primary text-white'
-                    : 'bg-transparent text-white hover:bg-primary hover:text-white'
-                }`}
+                className={`
+                  inline-block py-2 px-4
+                  text-sm font-medium
+                  transition-all duration-200
+                  rounded-full
+                  ${
+                    isActive
+                      ? 'bg-primary text-white'
+                      : 'bg-transparent text-white hover:bg-primary hover:text-white'
+                  }
+                `}
                 aria-label={`Aller à la page ${label}`}
               >
                 {label}
