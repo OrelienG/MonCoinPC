@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
     exit;
 }
 
-$rootDirectory = dirname(__DIR__, 2);
+$rootDirectory = dirname(__DIR__);
 $secretPath = $rootDirectory . DIRECTORY_SEPARATOR . 'moncoinpc-google.php';
 $cachePath = $rootDirectory . DIRECTORY_SEPARATOR . 'moncoinpc-google-reviews-cache.json';
 function respondFromCache(string $cachePath, bool $allowStale = false): bool
