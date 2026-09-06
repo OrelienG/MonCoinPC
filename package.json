@@ -5,7 +5,7 @@
   "type": "module",
   "description": "Services de réparation, assemblage, nettoyage et vente de composants pour PC",
   "author": "Orel",
-  "homepage": "https://moncoinpc.fr",
+  "homepage": "https://www.moncoinpc.fr",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

@@ -1,16 +1,16 @@
-# Active mod_rewrite
+# Enable mod_rewrite
 RewriteEngine On
 
 # Force HTTPS
 RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# Redirige toutes les routes React vers index.html (sauf fichiers existants)
+# Redirect React routes to index.html, except existing files and directories
 RewriteBase /
 RewriteRule ^index\.html$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.html [L]
 
-# Encodage par défaut
+# Default encoding
 AddDefaultCharset UTF-8

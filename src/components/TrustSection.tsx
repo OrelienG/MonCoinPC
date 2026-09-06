@@ -29,21 +29,29 @@ const features: Feature[] = [
 
 export const TrustSection = () => {
   return (
-    <section className="py-16 bg-white text-center px-4">
-      <h2 className="text-3xl font-bold text-dark mb-12">Pourquoi me faire confiance ?</h2>
+    <section className="relative overflow-hidden bg-dark px-4 py-12 text-center text-white md:py-16">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(245,107,42,0.11),transparent_48%)]" />
+      <div className="relative mx-auto max-w-6xl">
+        <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-primary">
+          Un service qui reste humain
+        </p>
+        <h2 className="mb-9 text-3xl font-bold text-white">Pourquoi me faire confiance ?</h2>
 
-      <div className="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto">
-        {features.map(({ icon: Icon, title, description }) => (
-          <div
-            key={title}
-            className="bg-light p-6 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-2 transition-all duration-300"
-            aria-label={title}
-          >
-            <Icon className="h-10 w-10 mx-auto text-primary mb-4" aria-hidden />
-            <h3 className="text-lg font-semibold text-dark mb-2">{title}</h3>
-            <p className="text-sm text-subtle leading-relaxed">{description}</p>
-          </div>
-        ))}
+        <div className="grid md:grid-cols-3">
+          {features.map(({ icon: Icon, title, description }) => (
+            <article
+              key={title}
+              className="border-b border-white/10 px-5 py-7 last:border-b-0 md:border-b-0 md:border-l md:px-8 md:py-3 md:first:border-l-0"
+              aria-label={title}
+            >
+              <span className="mx-auto mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-primary shadow-[0_8px_22px_rgba(245,107,42,0.2)]">
+                <Icon className="h-6 w-6 text-white" aria-hidden />
+              </span>
+              <h3 className="mb-2 text-lg font-semibold text-white">{title}</h3>
+              <p className="text-sm leading-relaxed text-gray-300">{description}</p>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );

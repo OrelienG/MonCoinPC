@@ -1,10 +1,13 @@
 export const LegalNotice = () => {
   return (
     <>
-      <section className="max-w-4xl mx-auto px-4 py-16">
-        <h1 className="text-3xl font-bold text-dark mb-6">Mentions légales</h1>
+      <section className="mx-auto max-w-4xl px-4 py-12 md:py-20">
+        <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-primary">
+          Informations
+        </p>
+        <h1 className="mb-8 text-3xl font-bold text-dark sm:text-4xl">Mentions légales</h1>
 
-        <div className="space-y-8 text-sm text-subtle leading-relaxed">
+        <div className="space-y-8 rounded-3xl border border-dark/8 bg-white p-6 text-sm leading-relaxed text-subtle shadow-[0_12px_40px_rgba(23,36,44,0.07)] sm:p-10">
           <div>
             <h2 className="font-semibold text-dark mb-2">Éditeur du site</h2>
             <p>
@@ -61,19 +64,26 @@ export const LegalNotice = () => {
           </div>
 
           <div>
-            <h2 className="font-semibold text-dark mb-2">Données personnelles</h2>
+            <h2 className="font-semibold text-dark mb-2">Données personnelles et formulaire</h2>
             <p>
-              Ce site ne collecte pas de données personnelles sans votre consentement. Si un
-              formulaire est proposé, vous serez informé de l’usage de vos données conformément au
-              RGPD.
+              Le formulaire collecte votre nom, votre adresse électronique et, si vous le
+              renseignez, votre numéro de téléphone afin de répondre à votre demande. Ce traitement
+              repose sur l’intérêt légitime de Mon Coin PC à traiter les sollicitations reçues. Les
+              informations sont transmises par le prestataire Formspree et ne sont pas utilisées à
+              des fins de prospection sans votre accord. Elles sont conservées le temps nécessaire
+              au traitement de la demande, puis supprimées au plus tard trois ans après le dernier
+              échange. Vous pouvez demander l’accès, la rectification, l’effacement ou la limitation
+              de vos données en écrivant à contact@moncoinpc.fr. Vous pouvez également adresser une
+              réclamation à la CNIL.
             </p>
           </div>
 
           <div>
             <h2 className="font-semibold text-dark mb-2">Cookies</h2>
             <p>
-              Ce site utilise des cookies uniquement à des fins de navigation ou de mesure
-              d’audience anonymisée. Aucun cookie publicitaire n’est utilisé.
+              Mon Coin PC n’utilise aucun outil publicitaire ni outil de mesure d’audience. Le
+              service tiers chargé du formulaire peut toutefois traiter les données techniques
+              strictement nécessaires à son fonctionnement et à la prévention des abus.
             </p>
           </div>
         </div>

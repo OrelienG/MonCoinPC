@@ -3,5 +3,11 @@ import react from '@vitejs/plugin-react';
 import Sitemap from 'vite-plugin-sitemap';
 
 export default defineConfig({
-  plugins: [react(), Sitemap({ hostname: 'https://moncoinpc.fr' })],
+  plugins: [
+    react(),
+    Sitemap({
+      hostname: 'https://www.moncoinpc.fr',
+      dynamicRoutes: ['/services', '/contact', '/legal-notice'],
+    }),
+  ],
 });
