@@ -1,23 +1,11 @@
 export const HeroBackground = () => {
   return (
-    <div className="absolute inset-0 -z-10 overflow-hidden">
-      <svg
-        role="presentation"
-        aria-hidden="true"
-        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 scale-125 opacity-20"
-        width="900"
-        height="900"
-        viewBox="0 0 900 900"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <defs>
-          <radialGradient id="mesh" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#FF6B00" stopOpacity="0.4" />
-            <stop offset="100%" stopColor="#FF6B00" stopOpacity="0" />
-          </radialGradient>
-        </defs>
-        <circle cx="450" cy="450" r="400" fill="url(#mesh)" />
+    <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
+      <div className="absolute -left-44 top-12 h-96 w-96 rounded-full bg-primary/8 blur-3xl" />
+      <div className="absolute -right-36 bottom-0 h-[30rem] w-[30rem] rounded-full bg-dark/5 blur-3xl" />
+      <svg className="absolute inset-x-0 bottom-0 h-32 w-full text-dark/[0.055]" viewBox="0 0 1440 128" preserveAspectRatio="none">
+        <path d="M0 112C260 42 432 46 688 92s438 36 752-44" fill="none" stroke="currentColor" />
+        <path d="M0 127C272 70 474 64 704 106s430 26 736-28" fill="none" stroke="currentColor" />
       </svg>
     </div>
   );

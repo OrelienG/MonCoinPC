@@ -25,18 +25,16 @@ export const Home = () => {
   return (
     <>
       <Hero />
-      <TrustSection />
-      <GoogleReviews />
       <section
-        className="relative overflow-hidden bg-dark px-4 py-12 text-white md:py-16"
+        className="relative overflow-hidden bg-dark px-4 py-14 text-white md:py-20"
         aria-labelledby="process-title"
       >
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(245,107,42,0.12),transparent_45%)]" />
         <div className="mx-auto max-w-6xl">
-          <p className="mb-2 text-center text-sm font-semibold uppercase tracking-widest text-primary">
-            Simple et transparent
-          </p>
-          <h2 id="process-title" className="mb-9 text-center text-3xl font-bold text-white">
+          <h2
+            id="process-title"
+            className="mx-auto mb-12 max-w-3xl text-center text-3xl font-bold tracking-[-0.025em] text-white md:text-4xl"
+          >
             Comment se passe une intervention ?
           </h2>
           <div className="relative grid gap-0 md:grid-cols-3 md:gap-8">
@@ -54,21 +52,26 @@ export const Home = () => {
                 </span>
                 <div>
                   <h3 className="mb-2 text-lg font-semibold text-white">{title}</h3>
-                  <p className="text-sm leading-relaxed text-gray-300">{description}</p>
+                  <p className="text-sm leading-relaxed text-white/75">{description}</p>
                 </div>
               </article>
             ))}
           </div>
         </div>
       </section>
+      <GoogleReviews />
+      <TrustSection />
 
-      <section className="bg-white px-4 py-12 md:py-16" aria-labelledby="area-title">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-[1.2fr_0.8fr]">
+      <section
+        className="border-y border-primary/10 bg-orange-50/60 px-4 py-12 md:py-16"
+        aria-labelledby="area-title"
+      >
+        <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-[1.15fr_0.85fr] md:gap-16">
           <div>
-            <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-primary">
-              Proche de chez vous
-            </p>
-            <h2 id="area-title" className="text-3xl font-bold text-dark">
+            <h2
+              id="area-title"
+              className="max-w-2xl text-3xl font-bold leading-tight tracking-[-0.025em] text-dark md:text-4xl"
+            >
               Dépannage informatique près de chez vous et à distance
             </h2>
             <p className="mt-4 max-w-2xl leading-relaxed text-subtle">
@@ -76,14 +79,14 @@ export const Home = () => {
               les problèmes logiciels, une prise en main à distance est possible partout en France.
             </p>
           </div>
-          <div className="rounded-3xl border border-dark/8 bg-light p-7 shadow-[0_10px_30px_rgba(23,36,44,0.06)]">
-            <p className="font-semibold text-dark">Un doute sur votre panne ou votre secteur ?</p>
-            <p className="mt-2 text-sm text-subtle">
+          <div className="rounded-2xl bg-dark p-7 text-white shadow-[0_18px_44px_rgba(23,36,44,0.18)] sm:p-8">
+            <p className="text-xl font-semibold">Un doute sur votre panne ou votre secteur ?</p>
+            <p className="mt-3 text-sm leading-relaxed text-white/65">
               Expliquez-moi votre besoin : la première réponse est sans engagement.
             </p>
             <Link
               to="/contact"
-              className="mt-5 inline-block rounded-full bg-primary px-6 py-3 font-medium text-white transition hover:bg-orange-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+              className="mt-6 inline-flex min-h-12 items-center justify-center rounded-full bg-primary px-6 py-3 font-semibold text-white shadow-[0_10px_24px_rgba(245,107,42,0.24)] transition hover:-translate-y-0.5 hover:bg-orange-600"
             >
               Parler de mon besoin
             </Link>

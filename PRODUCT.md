@@ -41,7 +41,9 @@ Mon Coin PC stands out first through a personal, direct, and educational relatio
 ## Brand Commitments
 
 - Name: Mon Coin PC.
-- The business is presented as operating since 2025.
+- The business was officially created in April 2025. The founder’s stated experience of more than
+  ten years comes from personal practice and helping family and friends before the business opened;
+  copy must not imply that the company itself has operated for more than ten years.
 - A human, approachable, transparent, and educational voice without unnecessary jargon.
 - Human proximity is the primary brand commitment; technical expertise supports it without replacing it.
 - Public contact details: `contact@moncoinpc.fr` and `06 66 39 75 17`.
@@ -50,11 +52,12 @@ Mon Coin PC stands out first through a personal, direct, and educational relatio
 
 ## Evidence on Hand
 
-- More than ten years of stated experience assembling, repairing, and optimizing desktop and laptop PCs.
+- More than ten years of stated personal experience assembling, repairing, and optimizing desktop
+  and laptop PCs for personal use, family, and friends before creating the business in April 2025.
 - A Google Business profile linked from the website, with its rating and review count retrieved through the Google API in production.
 - Genuine Google reviews are displayed dynamically when available; reviews embedded in the development code are explicitly local previews and must not be presented as production data.
 - The public service and pricing catalogue is located in `src/pages/Services.tsx`.
-- The logo is stored in `src/assets/logo.png`, the main photograph in `src/assets/home.jpg`, and the social preview in `public/og.png`.
+- The logo is stored in `src/assets/logo.png`, the main photograph in `src/assets/hero-workshop-v2.jpg`, and the social preview in `public/og.png`.
 - No additional testimonials, customers, benchmarks, or business results may be fabricated.
 
 ## Product Principles

@@ -92,7 +92,7 @@ export const Header = () => {
           onClick={() => {
             setMenuOpen((current) => !current);
           }}
-          aria-label="Menu"
+          aria-label={menuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
           aria-expanded={menuOpen}
         >
           <svg
