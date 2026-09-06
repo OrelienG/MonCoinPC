@@ -121,7 +121,7 @@ try {
         CURLOPT_HTTPHEADER => [
             'Content-Type: application/json',
             'X-Goog-Api-Key: ' . $apiKey,
-            'X-Goog-FieldMask: displayName,rating,userRatingCount,reviews,googleMapsUri,reviewsUri',
+            'X-Goog-FieldMask: displayName,rating,userRatingCount,reviews,googleMapsUri',
         ],
     ]);
 
@@ -137,7 +137,7 @@ try {
     $result = [
         'rating' => $place['rating'] ?? null,
         'reviewCount' => $place['userRatingCount'] ?? null,
-        'googleMapsUri' => $place['reviewsUri'] ?? $place['googleMapsUri'] ?? null,
+        'googleMapsUri' => $place['googleMapsUri'] ?? null,
         'reviews' => array_slice($place['reviews'] ?? [], 0, 3),
         'updatedAt' => gmdate(DATE_ATOM),
     ];
