@@ -6,28 +6,29 @@ total_score: 22
 max_score: 32
 target: page accueil
 target_identity: "file:C:\\Users\\oreli\\Documents\\Dev\\MonCoinPC\\src\\pages\\Home.tsx"
-target_fingerprint: "sha256:6c580885f47521777ade976636f81e054a7d5af8446aea138140b7744abcc143"
+target_fingerprint: 'sha256:6c580885f47521777ade976636f81e054a7d5af8446aea138140b7744abcc143'
 target_path: "C:\\Users\\oreli\\Documents\\Dev\\MonCoinPC\\src\\pages\\Home.tsx"
 timestamp: 2026-09-06T17-39-32Z
 slug: src-pages-home-tsx
 ---
+
 # Critique de la page d’accueil
 
 ## Santé UX
 
-| # | Heuristique | Score | Point clé |
-|---|---|---:|---|
-| 1 | Visibilité du statut | 2/4 | Les avis peuvent basculer silencieusement vers un repli. |
-| 2 | Correspondance au monde réel | 3/4 | Discours simple, quelques termes encore techniques. |
-| 3 | Contrôle et liberté | 3/4 | Plusieurs chemins de contact clairs. |
-| 4 | Cohérence et standards | 3/4 | Ensemble cohérent, libellés d’action un peu fragmentés. |
-| 5 | Prévention des erreurs | 3/4 | Le prix annoncé avant intervention rassure, mais zone et distance restent floues. |
-| 6 | Reconnaissance plutôt que rappel | 3/4 | Les grands services sont visibles, les cas précis demandent une autre page. |
-| 7 | Flexibilité et efficacité | n/a | Landing page de persuasion. |
-| 8 | Esthétique et minimalisme | 3/4 | Propre et lisible, mais réassurance répétée et longue sur mobile. |
-| 9 | Diagnostic et récupération | 2/4 | Peu d’erreurs possibles, mais l’échec des avis reste silencieux. |
-| 10 | Aide et documentation | n/a | Landing page de persuasion. |
-| **Total** |  | **22/32** | **Acceptable, proche de Bon** |
+| #         | Heuristique                      |     Score | Point clé                                                                         |
+| --------- | -------------------------------- | --------: | --------------------------------------------------------------------------------- |
+| 1         | Visibilité du statut             |       2/4 | Les avis peuvent basculer silencieusement vers un repli.                          |
+| 2         | Correspondance au monde réel     |       3/4 | Discours simple, quelques termes encore techniques.                               |
+| 3         | Contrôle et liberté              |       3/4 | Plusieurs chemins de contact clairs.                                              |
+| 4         | Cohérence et standards           |       3/4 | Ensemble cohérent, libellés d’action un peu fragmentés.                           |
+| 5         | Prévention des erreurs           |       3/4 | Le prix annoncé avant intervention rassure, mais zone et distance restent floues. |
+| 6         | Reconnaissance plutôt que rappel |       3/4 | Les grands services sont visibles, les cas précis demandent une autre page.       |
+| 7         | Flexibilité et efficacité        |       n/a | Landing page de persuasion.                                                       |
+| 8         | Esthétique et minimalisme        |       3/4 | Propre et lisible, mais réassurance répétée et longue sur mobile.                 |
+| 9         | Diagnostic et récupération       |       2/4 | Peu d’erreurs possibles, mais l’échec des avis reste silencieux.                  |
+| 10        | Aide et documentation            |       n/a | Landing page de persuasion.                                                       |
+| **Total** |                                  | **22/32** | **Acceptable, proche de Bon**                                                     |
 
 ## Verdict de spécificité
 
