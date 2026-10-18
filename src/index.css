@@ -22,7 +22,6 @@
   }
 
   body {
-    min-width: 320px;
     background: var(--color-light);
     padding-bottom: calc(3.5rem + max(0.5rem, env(safe-area-inset-bottom)));
   }

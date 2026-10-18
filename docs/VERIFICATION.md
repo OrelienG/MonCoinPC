@@ -1,11 +1,51 @@
 # Vérification complète — 18 octobre 2026
 
+## Contrôle après mise en ligne
+
+La version transférée par le propriétaire a été contrôlée sur
+`https://www.moncoinpc.fr` le 18 octobre 2026 :
+
+- Accueil, services, contact et mentions légales : HTTP 200, contenu présent dans
+  le HTML initial, un H1 et un titre/canonique propres à chaque page.
+- Les 12 prestations sont présentes ; diagnostic à 30 € pour la première heure,
+  recherches supplémentaires à 45 €/h après accord et pièces/licences en supplément
+  sont bien publiés sur services et contact.
+- Les 12 liens de devis ont été ouverts : la bonne catégorie est présélectionnée.
+- Sans téléphone ni e-mail, le formulaire affiche l’erreur attendue et place le
+  focus sur l’e-mail. Aucun nouveau message réel n’a été envoyé.
+- Avis Google : API HTTP 200, note 5/5, 10 avis au total, 3 avis renvoyés. Le bandeau
+  du haut et la section d’avis affichent bien ces données en production.
+- HTTPS et les redirections des URL `index.html` et des barres finales fonctionnent
+  en HTTP 301 ; le paramètre de catégorie est conservé.
+- Une page inconnue et un fichier JS inexistant renvoient HTTP 404 avec la page
+  dédiée et `noindex`. `robots.txt` et `sitemap.xml` répondent HTTP 200.
+- Le compteur accepte un événement de contrôle en HTTP 204. Sa lecture sans clé
+  reste protégée par une réponse 404. La lecture avec la clé privée n’a pas été
+  vérifiée ; elle nécessite la configuration décrite dans le README.
+
+Deux corrections supplémentaires restent **locales, à retransférer par FTP** :
+le badge Google affiche désormais les étoiles au-dessus du nombre d’avis ; la
+largeur minimale fixe du corps de page a été retirée pour éviter un débordement
+sur les fenêtres étroites avec barre de défilement.
+
+Après correction, les cinq pages ont été contrôlées dans des cadres de navigateur
+de 320, 768 et 1024 px (largeur utile parfois réduite de 15 px par la barre de
+défilement), plus le composant d’avis à 320 px : 16 vues, aucun débordement et aucune
+image cassée. Le menu mobile s’ouvre avec Entrée et se ferme avec Échap. Il s’agit
+de tests de mise en page dans des cadres locaux, pas d’une certification sur
+téléphones physiques ni d’un nouveau test Safari iOS.
+
+`npm run validate` passe. Le dossier `dist/` et l’archive locale ont été actualisés.
+Preuves temporaires hors Git : `.performance.local/live-http.json`,
+`live-responsive.json` et `badge-google-corrige.jpg` dans le même dossier.
+
 ## Verdict
 
 L’identité reste cohérente : orange `#f56b2a`, sombre `#17242c`, cartes blanches et
 vocabulaire d’un interlocuteur individuel. Le parcours des 12 prestations est
 fonctionnel. Aucun blocage n’a été relevé dans les scénarios finaux testés.
-Cette conclusion concerne la version locale de production, pas un déploiement.
+Le bilan initial ci-dessous concerne la version locale ; le contrôle du déploiement
+réel et les deux dernières corrections sont détaillés au début de ce document.
 
 ### Ajustements visuels après comparaison avec le site publié
 

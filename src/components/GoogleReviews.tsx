@@ -109,18 +109,21 @@ export const GoogleReviews = ({ reviewsData }: { reviewsData: ReviewsResponse | 
             rel="noopener noreferrer"
             className="flex items-center gap-4 rounded-2xl bg-surface px-5 py-4 shadow-[0_10px_28px_rgba(23,36,44,0.08)] transition hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(23,36,44,0.12)]"
           >
-            <span className="text-3xl font-bold text-dark">
+            <span className="shrink-0 text-3xl font-bold tabular-nums text-dark">
               {rating?.toLocaleString('fr-FR', { minimumFractionDigits: 1 })}
             </span>
-            <span>
-              {typeof rating === 'number' && <StarRating rating={rating} className="flex" />}
-              <span className="text-sm text-subtle">
+            <span className="grid min-w-0 gap-1 text-left">
+              {typeof rating === 'number' && <StarRating rating={rating} />}
+              <span className="block text-sm leading-snug text-subtle">
                 {typeof reviewCount === 'number'
                   ? `${reviewCount} avis sur Google`
                   : 'Consulter les avis Google'}
               </span>
             </span>
-            <ArrowTopRightOnSquareIcon className="h-5 w-5 text-primary" aria-hidden="true" />
+            <ArrowTopRightOnSquareIcon
+              className="h-5 w-5 shrink-0 text-primary"
+              aria-hidden="true"
+            />
           </a>
         </div>
 
