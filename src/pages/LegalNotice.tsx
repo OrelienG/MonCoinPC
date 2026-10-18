@@ -2,12 +2,12 @@ export const LegalNotice = () => {
   return (
     <>
       <section className="mx-auto max-w-4xl px-4 py-12 md:py-20">
-        <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-primary">
+        <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-dark">
           Informations
         </p>
         <h1 className="mb-8 text-3xl font-bold text-dark sm:text-4xl">Mentions légales</h1>
 
-        <div className="space-y-8 rounded-3xl border border-dark/8 bg-white p-6 text-sm leading-relaxed text-subtle shadow-[0_12px_40px_rgba(23,36,44,0.07)] sm:p-10">
+        <div className="space-y-8 rounded-3xl border border-dark/8 bg-surface p-6 text-base leading-relaxed text-subtle shadow-[0_12px_40px_rgba(23,36,44,0.07)] sm:p-10">
           <div>
             <h2 className="font-semibold text-dark mb-2">Éditeur du site</h2>
             <p>
@@ -19,7 +19,10 @@ export const LegalNotice = () => {
               <br />
               Adresse : 44 Route de Craonne – 02160 La Ville-aux-Bois-lès-Pontavert – France
               <br />
-              Email : contact@moncoinpc.fr
+              E-mail :{' '}
+              <a href="mailto:contact@moncoinpc.fr" className="break-words text-dark underline">
+                contact@moncoinpc.fr
+              </a>
             </p>
           </div>
 
@@ -38,7 +41,7 @@ export const LegalNotice = () => {
                 href="https://www.ovhcloud.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary hover:underline"
+                className="text-dark hover:underline"
               >
                 www.ovhcloud.com
               </a>
@@ -66,24 +69,32 @@ export const LegalNotice = () => {
           <div>
             <h2 className="font-semibold text-dark mb-2">Données personnelles et formulaire</h2>
             <p>
-              Le formulaire collecte votre nom, votre adresse électronique et, si vous le
-              renseignez, votre numéro de téléphone afin de répondre à votre demande. Ce traitement
-              repose sur l’intérêt légitime de Mon Coin PC à traiter les sollicitations reçues. Les
-              informations sont transmises par le prestataire Formspree et ne sont pas utilisées à
-              des fins de prospection sans votre accord. Elles sont conservées le temps nécessaire
-              au traitement de la demande, puis supprimées au plus tard trois ans après le dernier
-              échange. Vous pouvez demander l’accès, la rectification, l’effacement ou la limitation
-              de vos données en écrivant à contact@moncoinpc.fr. Vous pouvez également adresser une
-              réclamation à la CNIL.
+              Le formulaire collecte votre nom, la description de votre besoin et au moins un moyen
+              de contact parmi votre adresse électronique ou votre numéro de téléphone afin de
+              répondre à votre demande. Ce traitement repose sur l’intérêt légitime de Mon Coin PC à
+              traiter les sollicitations reçues. Les informations sont transmises par le prestataire
+              Formspree et ne sont pas utilisées à des fins de prospection sans votre accord. Elles
+              sont conservées le temps nécessaire au traitement de la demande, puis supprimées au
+              plus tard trois ans après le dernier échange. Vous pouvez demander l’accès, la
+              rectification, l’effacement ou la limitation de vos données en écrivant à{' '}
+              <a href="mailto:contact@moncoinpc.fr" className="break-words text-dark underline">
+                contact@moncoinpc.fr
+              </a>
+              . Vous pouvez également adresser une réclamation à la CNIL.
             </p>
           </div>
 
           <div>
-            <h2 className="font-semibold text-dark mb-2">Cookies</h2>
+            <h2 className="font-semibold text-dark mb-2">Mesure d’audience et cookies</h2>
             <p>
-              Mon Coin PC n’utilise aucun outil publicitaire ni outil de mesure d’audience. Le
-              service tiers chargé du formulaire peut toutefois traiter les données techniques
-              strictement nécessaires à son fonctionnement et à la prévention des abus.
+              Mon Coin PC n’utilise aucun outil publicitaire et ne dépose aucun cookie de mesure
+              d’audience. Un outil interne comptabilise uniquement, sous forme agrégée, les clics
+              vers le téléphone, l’e-mail, les demandes de devis, les avis Google et les formulaires
+              envoyés. Aucun identifiant de visiteur, adresse IP, parcours individuel, contenu de
+              formulaire ou information sur l’appareil n’est enregistré dans ces statistiques. Les
+              compteurs journaliers sont conservés pendant 90 jours afin d’améliorer l’ergonomie du
+              site. Le service tiers chargé du formulaire peut toutefois traiter les données
+              techniques strictement nécessaires à son fonctionnement et à la prévention des abus.
             </p>
           </div>
         </div>

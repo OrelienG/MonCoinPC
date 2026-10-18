@@ -9,23 +9,26 @@ export const MobileContactBar = () => {
     >
       <a
         href="tel:+33666397517"
+        data-conversion="phone_click"
         className="flex min-h-12 flex-col items-center justify-center gap-1 rounded-xl text-xs font-medium transition active:bg-white/10"
       >
-        <PhoneIcon className="h-5 w-5 text-primary" aria-hidden="true" />
+        <PhoneIcon className="h-5 w-5 text-brand" aria-hidden="true" />
         Appeler
       </a>
       <a
         href="mailto:contact@moncoinpc.fr"
+        data-conversion="email_click"
         className="flex min-h-12 flex-col items-center justify-center gap-1 rounded-xl text-xs font-medium transition active:bg-white/10"
       >
-        <EnvelopeIcon className="h-5 w-5 text-primary" aria-hidden="true" />
+        <EnvelopeIcon className="h-5 w-5 text-brand" aria-hidden="true" />
         E-mail
       </a>
       <Link
         to="/contact#devis"
+        data-conversion="quote_click"
         className="flex min-h-12 flex-col items-center justify-center gap-1 rounded-xl text-xs font-semibold transition active:bg-white/10"
       >
-        <DocumentTextIcon className="h-5 w-5 text-primary" aria-hidden="true" />
+        <DocumentTextIcon className="h-5 w-5 text-brand" aria-hidden="true" />
         Devis
       </Link>
     </nav>

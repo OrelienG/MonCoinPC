@@ -2,6 +2,7 @@ import { Hero } from '../components/Hero';
 import { TrustSection } from '../components/TrustSection';
 import { Link } from 'react-router-dom';
 import { GoogleReviews } from '../components/GoogleReviews';
+import { useGoogleReviews } from '../hooks/useGoogleReviews';
 
 const steps = [
   {
@@ -22,18 +23,18 @@ const steps = [
 ];
 
 export const Home = () => {
+  const reviewsData = useGoogleReviews();
   return (
     <>
-      <Hero />
+      <Hero reviewsData={reviewsData} />
       <section
         className="relative overflow-hidden bg-dark px-4 py-14 text-white md:py-20"
         aria-labelledby="process-title"
       >
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(245,107,42,0.12),transparent_45%)]" />
         <div className="mx-auto max-w-6xl">
           <h2
             id="process-title"
-            className="mx-auto mb-12 max-w-3xl text-center text-3xl font-bold tracking-[-0.025em] text-white md:text-4xl"
+            className="mx-auto mb-12 max-w-3xl text-center text-2xl font-bold tracking-[-0.025em] text-white sm:text-3xl md:text-4xl"
           >
             Comment se passe une intervention ?
           </h2>
@@ -47,7 +48,7 @@ export const Home = () => {
                 key={number}
                 className="relative grid grid-cols-[3rem_1fr] gap-4 border-b border-white/10 py-6 last:border-b-0 md:block md:border-0 md:px-5 md:py-0 md:text-center"
               >
-                <span className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full border-4 border-dark bg-primary font-bold text-white shadow-[0_0_0_1px_rgba(245,107,42,0.35),0_8px_20px_rgba(245,107,42,0.2)] md:mx-auto md:mb-6">
+                <span className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full border-4 border-dark bg-brand font-bold text-dark shadow-[0_0_0_1px_rgba(245,107,42,0.35),0_8px_20px_rgba(245,107,42,0.2)] md:mx-auto md:mb-6">
                   {number}
                 </span>
                 <div>
@@ -59,14 +60,14 @@ export const Home = () => {
           </div>
         </div>
       </section>
-      <GoogleReviews />
+      <GoogleReviews reviewsData={reviewsData} />
       <TrustSection />
 
       <section
-        className="border-y border-primary/10 bg-orange-50/60 px-4 py-12 md:py-16"
+        className="border-y border-dark/8 bg-light px-4 py-12 md:py-16"
         aria-labelledby="area-title"
       >
-        <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-[1.15fr_0.85fr] md:gap-16">
+        <div className="mx-auto grid max-w-6xl grid-cols-[repeat(auto-fit,minmax(min(100%,25rem),1fr))] items-center gap-10 md:gap-16">
           <div>
             <h2
               id="area-title"
@@ -75,18 +76,21 @@ export const Home = () => {
               Dépannage informatique près de chez vous et à distance
             </h2>
             <p className="mt-4 max-w-2xl leading-relaxed text-subtle">
-              Basé à La Ville-aux-Bois-lès-Pontavert, j’interviens sur site dans les alentours. Pour
-              les problèmes logiciels, une prise en main à distance est possible partout en France.
+              Basé à La Ville-aux-Bois-lès-Pontavert, je me déplace à domicile dans les alentours.
+              Le dépôt et le retrait de matériel sont également possibles sur rendez-vous. Pour les
+              déplacements au-delà de 15 km, les éventuels frais sont annoncés à l’avance. Pour les
+              problèmes logiciels, une prise en main à distance est possible partout en France.
             </p>
           </div>
-          <div className="rounded-2xl bg-dark p-7 text-white shadow-[0_18px_44px_rgba(23,36,44,0.18)] sm:p-8">
+          <div className="rounded-2xl bg-surface p-7 text-dark shadow-[0_8px_24px_rgba(23,36,44,0.06)] sm:p-8">
             <p className="text-xl font-semibold">Un doute sur votre panne ou votre secteur ?</p>
-            <p className="mt-3 text-sm leading-relaxed text-white/65">
+            <p className="mt-3 text-sm leading-relaxed text-subtle">
               Expliquez-moi votre besoin : la première réponse est sans engagement.
             </p>
             <Link
               to="/contact"
-              className="mt-6 inline-flex min-h-12 items-center justify-center rounded-full bg-primary px-6 py-3 font-semibold text-white shadow-[0_10px_24px_rgba(245,107,42,0.24)] transition hover:-translate-y-0.5 hover:bg-orange-600"
+              data-conversion="quote_click"
+              className="mt-6 inline-flex min-h-12 items-center justify-center rounded-full bg-brand px-6 py-3 font-semibold text-dark shadow-[0_10px_24px_rgba(245,107,42,0.24)] transition hover:-translate-y-0.5 hover:bg-[#ff8247]"
             >
               Parler de mon besoin
             </Link>

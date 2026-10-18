@@ -1,7 +1,6 @@
 import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
+import { createRoot, hydrateRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
 import { App } from './App';
 
 import './index.css';
@@ -11,12 +10,13 @@ if (!rootEl) {
   throw new Error("L'élément racine #root est introuvable dans le DOM.");
 }
 
-createRoot(rootEl).render(
+const app = (
   <StrictMode>
-    <HelmetProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </HelmetProvider>
-  </StrictMode>,
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </StrictMode>
 );
+
+if (rootEl.hasChildNodes()) hydrateRoot(rootEl, app);
+else createRoot(rootEl).render(app);

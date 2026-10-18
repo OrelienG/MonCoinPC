@@ -4,30 +4,10 @@ import {
   ChevronRightIcon,
 } from '@heroicons/react/24/outline';
 import { StarIcon } from '@heroicons/react/20/solid';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import type { Review, ReviewsResponse } from '../hooks/useGoogleReviews';
 
 const googleBusinessUrl = 'https://share.google/ekxJGDWxQfVtYpFdM';
-
-type Review = {
-  rating?: number;
-  relativePublishTimeDescription?: string;
-  text?: { text?: string };
-  originalText?: { text?: string };
-  googleMapsUri?: string;
-  visitDate?: { month?: number; year?: number };
-  authorAttribution?: {
-    displayName?: string;
-    photoUri?: string;
-    uri?: string;
-  };
-};
-
-type ReviewsResponse = {
-  rating?: number;
-  reviewCount?: number;
-  googleMapsUri?: string;
-  reviews?: Review[];
-};
 
 const developmentPreviewReviews: Review[] = [
   {
@@ -82,29 +62,11 @@ const StarRating = ({ rating, className = '' }: { rating: number; className?: st
   </span>
 );
 
-export const GoogleReviews = () => {
-  const [reviewsData, setReviewsData] = useState<ReviewsResponse | null>(null);
+export const GoogleReviews = ({ reviewsData }: { reviewsData: ReviewsResponse | null }) => {
   const [activeReview, setActiveReview] = useState(0);
 
-  useEffect(() => {
-    const controller = new AbortController();
-
-    fetch('/api/google-reviews.php', { signal: controller.signal })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Reviews unavailable');
-        }
-
-        return response.json() as Promise<ReviewsResponse>;
-      })
-      .then(setReviewsData)
-      .catch(() => undefined);
-
-    return () => controller.abort();
-  }, []);
-
-  const rating = reviewsData?.rating ?? 5;
-  const reviewCount = reviewsData?.reviewCount ?? 9;
+  const rating = reviewsData?.rating;
+  const reviewCount = reviewsData?.reviewCount;
   const reviews = reviewsData?.reviews ?? (import.meta.env.DEV ? developmentPreviewReviews : []);
   const isDevelopmentPreview = import.meta.env.DEV && reviewsData === null;
   const reviewsUrl = reviewsData?.googleMapsUri ?? googleBusinessUrl;
@@ -145,23 +107,29 @@ export const GoogleReviews = () => {
             href={reviewsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-4 rounded-2xl bg-white px-5 py-4 shadow-[0_10px_28px_rgba(23,36,44,0.08)] transition hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(23,36,44,0.12)]"
+            className="flex items-center gap-4 rounded-2xl bg-surface px-5 py-4 shadow-[0_10px_28px_rgba(23,36,44,0.08)] transition hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(23,36,44,0.12)]"
           >
-            <span className="text-3xl font-bold text-dark">{rating.toFixed(1)}</span>
+            <span className="text-3xl font-bold text-dark">
+              {rating?.toLocaleString('fr-FR', { minimumFractionDigits: 1 })}
+            </span>
             <span>
-              <StarRating rating={rating} className="flex" />
-              <span className="text-sm text-subtle">{reviewCount} avis sur Google</span>
+              {typeof rating === 'number' && <StarRating rating={rating} className="flex" />}
+              <span className="text-sm text-subtle">
+                {typeof reviewCount === 'number'
+                  ? `${reviewCount} avis sur Google`
+                  : 'Consulter les avis Google'}
+              </span>
             </span>
             <ArrowTopRightOnSquareIcon className="h-5 w-5 text-primary" aria-hidden="true" />
           </a>
         </div>
 
         {reviews.length > 0 ? (
-          <div className="relative mx-auto mt-9 max-w-4xl overflow-hidden rounded-2xl bg-white px-6 py-6 shadow-[0_18px_48px_rgba(23,36,44,0.09)] sm:px-8 sm:py-7">
-            <article>
+          <div className="relative mx-auto mt-9 max-w-4xl overflow-hidden rounded-2xl bg-surface px-6 py-6 shadow-[0_18px_48px_rgba(23,36,44,0.09)] sm:px-8 sm:py-7">
+            <article aria-live="polite" aria-atomic="true">
               <div className="flex items-start justify-between gap-5">
                 <div className="flex min-w-0 items-center gap-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-orange-50 text-lg font-bold text-primary ring-1 ring-primary/15">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary-soft text-lg font-bold text-dark ring-1 ring-primary/15">
                     {currentAuthor.charAt(0).toUpperCase()}
                   </div>
                   <div className="min-w-0">
@@ -193,7 +161,7 @@ export const GoogleReviews = () => {
                   href={currentReview?.googleMapsUri ?? reviewsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-dark underline decoration-dark/25 hover:decoration-primary"
                 >
                   Voir cet avis sur Google
                   <ArrowTopRightOnSquareIcon className="h-4 w-4" aria-hidden="true" />
@@ -254,9 +222,10 @@ export const GoogleReviews = () => {
             </div>
             <a
               href={reviewsUrl}
+              data-conversion="google_reviews_click"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex shrink-0 items-center gap-2 rounded-full bg-primary px-6 py-3 font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-orange-600"
+              className="inline-flex shrink-0 items-center gap-2 rounded-full bg-brand px-6 py-3 font-semibold text-dark shadow-sm transition hover:-translate-y-0.5 hover:bg-[#ff8247]"
             >
               Lire les avis Google
               <ArrowTopRightOnSquareIcon className="h-4 w-4" aria-hidden="true" />

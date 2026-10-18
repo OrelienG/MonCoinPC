@@ -5,12 +5,21 @@ RewriteEngine On
 RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# Redirect React routes to index.html, except existing files and directories
+# Serve prerendered pages without changing their public URL.
+Options -MultiViews
+DirectorySlash Off
+ErrorDocument 404 /404.html
 RewriteBase /
-RewriteRule ^index\.html$ - [L]
+# Redirect only public requests for index files, never internal rewrites.
+RewriteCond %{THE_REQUEST} \s/+index\.html[?\s] [NC]
+RewriteRule ^index\.html$ / [R=301,L]
+RewriteCond %{THE_REQUEST} \s/+(services|contact|legal-notice)/index\.html[?\s] [NC]
+RewriteRule ^(services|contact|legal-notice)/index\.html$ /$1 [R=301,L]
+RewriteRule ^(services|contact|legal-notice)/$ /$1 [R=301,L]
+RewriteRule ^(services|contact|legal-notice)/?$ /$1/index.html [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.html [L]
+RewriteRule . - [R=404,L]
 
 # Default encoding
 AddDefaultCharset UTF-8

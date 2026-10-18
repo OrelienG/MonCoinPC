@@ -13,6 +13,8 @@ dist-ssr
 *.local
 moncoinpc-google.php
 moncoinpc-google-reviews-cache.json
+moncoinpc-analytics.php
+moncoinpc-conversions.json
 
 # Editor directories and files
 .vscode/*
@@ -24,3 +26,5 @@ moncoinpc-google-reviews-cache.json
 *.njsproj
 *.sln
 *.sw?
+
+.prerender/

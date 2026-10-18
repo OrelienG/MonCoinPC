@@ -21,9 +21,15 @@ Mon Coin PC stands out first through a personal, direct, and educational relatio
 ## Operating Context
 
 - On-site services around La Ville-aux-Bois-lès-Pontavert.
+- Travel beyond 15 km may incur an additional fee, which is disclosed before the intervention.
+- Equipment drop-off and collection at the business address are available by prior appointment
+  only; the premises are not open for unannounced walk-in visits.
+- Availability is Monday through Saturday from 10:00 to 20:00, and Sunday from 10:00 to 18:00.
 - Remote assistance available throughout France for compatible software issues.
 - The customer describes the issue, the machine, and their availability; Mon Coin PC then establishes a diagnosis and communicates the proposed solution and its cost before intervening.
 - Contact begins by phone, email, or quote request form.
+- The diagnostic is free when the customer subsequently proceeds with the service. Otherwise, the first hour costs €30. Further investigation costs €45/hour and requires notifying the customer and obtaining their agreement before continuing (approved 18 October 2026). Do not use a fixed €60 diagnostic.
+- Displayed service prices exclude any parts and paid licences, which are added to the quote.
 
 ## Capabilities and Constraints
 
@@ -36,11 +42,21 @@ Mon Coin PC stands out first through a personal, direct, and educational relatio
 - Printer and peripheral installation and troubleshooting.
 - Data transfer, backup, recovery, and migration.
 - Nintendo Switch, PlayStation, and Xbox console maintenance.
+- Simple phone and tablet repairs, depending on the device and fault.
+- Simple electronic repairs, subject to an initial feasibility check.
+- Installation and configuration of connected security cameras, including solar Tapo models.
 - Public “starting from” prices for selected services and quotes for variable work; pricing is agreed before intervention.
 
 ## Brand Commitments
 
 - Name: Mon Coin PC.
+- Keep the original orange `#f56b2a` on buttons, accents and the second line of the
+  homepage slogan. The all-dark headline was tried and rejected on 18 October 2026;
+  retain the documented contrast tradeoff rather than silently darkening the orange.
+- The homepage retains the published site's spacious desktop composition and subtle
+  background tints. The expertise section uses the same dark `#17242c` as the header,
+  with light text and orange icons. Services retain grouped cards; contact keeps the
+  simplified form.
 - The business was officially created in April 2025. The founder’s stated experience of more than
   ten years comes from personal practice and helping family and friends before the business opened;
   copy must not imply that the company itself has operated for more than ten years.

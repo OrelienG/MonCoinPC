@@ -9,6 +9,7 @@ import { LegalNotice } from './pages/LegalNotice';
 import { MobileContactBar } from './components/MobileContactBar';
 import { PageMeta } from './components/PageMeta';
 import { ScrollToTop } from './components/ScrollToTop';
+import { ConversionTracker } from './components/ConversionTracker';
 
 export const App = () => {
   const localBusinessSchema = {
@@ -26,6 +27,7 @@ export const App = () => {
       addressCountry: 'FR',
     },
     areaServed: 'La Ville-aux-Bois-lès-Pontavert et alentours',
+    openingHours: ['Mo-Sa 10:00-20:00', 'Su 10:00-18:00'],
     priceRange: '€€',
     sameAs: ['https://share.google/ekxJGDWxQfVtYpFdM'],
     contactPoint: {
@@ -40,8 +42,12 @@ export const App = () => {
     <div className="min-h-screen bg-light text-text font-sans flex flex-col">
       <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
       <ScrollToTop />
+      <ConversionTracker />
+      <a href="#main-content" className="skip-link">
+        Aller au contenu
+      </a>
       <Header />
-      <main className="flex-grow">
+      <main id="main-content" tabIndex={-1} className="flex-grow">
         <Routes>
           <Route
             path="/"
@@ -61,8 +67,8 @@ export const App = () => {
             element={
               <>
                 <PageMeta
-                  title="Réparation et montage PC dans l’Aisne | Mon Coin PC"
-                  description="Réparation, assemblage, amélioration et entretien de PC dans l’Aisne. Diagnostic clair et tarif annoncé avant intervention."
+                  title="Services et tarifs informatiques dans l’Aisne | Mon Coin PC"
+                  description="Découvrez les services et tarifs de Mon Coin PC : réparation, montage et entretien informatique dans l’Aisne. Montant confirmé avant intervention."
                   canonical="https://www.moncoinpc.fr/services"
                 />
                 <Services />
